@@ -2021,101 +2021,63 @@ textarea{
 @media(max-width:600px){
 
     .builder-navbar{
-
         height:68px;
-
         padding:0 18px;
-
     }
-
 
     .builder-logo{
-
         font-size:21px;
-
     }
-
 
     .builder-nav-right{
-
         gap:7px;
-
     }
-
 
     .home-btn{
-
         padding:9px 10px;
-
         font-size:11px;
-
     }
-
 
     .help-btn{
-
         padding:9px 10px;
-
         font-size:11px;
-
     }
-
 
     .editor{
-
         padding:15px;
-
     }
-
 
     .form-section{
-
         padding:17px;
-
     }
-
 
     .theme-grid{
-
         grid-template-columns:1fr 1fr;
-
     }
-
 
     .preview-area{
-
         padding:20px 10px;
-
         justify-content:flex-start;
-
+        overflow-x:hidden;
     }
-
 
     .cv{
-
+        width:794px;
+        transform:scale(0.43);
         transform-origin:top left;
-
+        margin-bottom:-640px;
     }
-
 
     .modal{
-
         padding:10px;
-
     }
-
 
     .modal-box{
-
         padding:25px 18px;
-
     }
 
-
     .modal-box h2{
-
         font-size:20px;
-
     }
 
 }
