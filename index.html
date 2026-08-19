@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LankaCV - Create Your Professional CV</title>
+
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        Lanka<span>CV</span>
+    </a>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#templates">Templates</a>
+        <button class="nav-btn" onclick="openBuilder()">
+            Create CV
+        </button>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="#features" onclick="closeMenu()">Features</a>
+    <a href="#how" onclick="closeMenu()">How It Works</a>
+    <a href="#templates" onclick="closeMenu()">Templates</a>
+
+    <button onclick="openBuilder()">
+        Create My CV
+    </button>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🇱🇰 Made for Sri Lankan Job Seekers
+        </div>
+
+        <h1>
+            Create a
+            <span>Professional CV</span>
+            Easily
+        </h1>
+
+        <p>
+            Build a beautiful professional CV in minutes.
+            Choose a template, add your details and save
+            your CV as a PDF.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button
+                class="primary-btn"
+                onclick="openBuilder()">
+
+                Create My CV
+                <span>→</span>
+
+            </button>
+
+            <button
+                class="secondary-btn"
+                onclick="scrollToHow()">
+
+                How it works
+
+            </button>
+
+        </div>
+
+        <div class="trust">
+
+            <div>
+                ✓ Free to use
+            </div>
+
+            <div>
+                ✓ No account required
+            </div>
+
+            <div>
+                ✓ Mobile friendly
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO CV MOCKUP -->
+
+    <div class="hero-preview">
+
+        <div class="mock-cv">
+
+            <div class="mock-sidebar">
+
+                <div class="mock-photo">
+                    👤
+                </div>
+
+                <div class="mock-line long"></div>
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+
+                <div class="mock-title">
+                    CONTACT
+                </div>
+
+                <div class="mock-line"></div>
+                <div class="mock-line"></div>
+
+            </div>
+
+
+            <div class="mock-content">
+
+                <div class="mock-name">
+                    YOUR NAME
+                </div>
+
+                <div class="mock-job">
+                    PROFESSIONAL
+                </div>
+
+                <div class="mock-section">
+                    PROFILE
+                </div>
+
+                <div class="mock-text"></div>
+                <div class="mock-text"></div>
+                <div class="mock-text short"></div>
+
+                <div class="mock-section">
+                    EXPERIENCE
+                </div>
+
+                <div class="mock-heading"></div>
+                <div class="mock-text"></div>
+                <div class="mock-text"></div>
+
+                <div class="mock-section">
+                    EDUCATION
+                </div>
+
+                <div class="mock-heading"></div>
+                <div class="mock-text"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features section" id="features">
+
+    <div class="section-heading">
+
+        <span>FEATURES</span>
+
+        <h2>
+            Everything you need to build a great CV
+        </h2>
+
+        <p>
+            Simple tools to help you create a professional
+            CV without complicated software.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎨
+            </div>
+
+            <h3>
+                Beautiful Templates
+            </h3>
+
+            <p>
+                Choose from Modern, Classic, Minimal
+                and other professional CV styles.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💼
+            </div>
+
+            <h3>
+                Multiple Experience
+            </h3>
+
+            <p>
+                Add as many work experience records
+                as you need.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🎓
+            </div>
+
+            <h3>
+                Education & Qualifications
+            </h3>
+
+            <p>
+                Add O/L, A/L and your other
+                qualifications easily.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📱
+            </div>
+
+            <h3>
+                Mobile Friendly
+            </h3>
+
+            <p>
+                Create your CV from your phone,
+                tablet or computer.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📄
+            </div>
+
+            <h3>
+                PDF Ready
+            </h3>
+
+            <p>
+                Print your finished CV and save it
+                as a professional PDF.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🇱🇰
+            </div>
+
+            <h3>
+                Made for Sri Lanka
+            </h3>
+
+            <p>
+                Designed with Sri Lankan education
+                and job applications in mind.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how section" id="how">
+
+    <div class="section-heading">
+
+        <span>HOW IT WORKS</span>
+
+        <h2>
+            Create your CV in 3 simple steps
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Enter your details
+                </h3>
+
+                <p>
+                    Add your personal information,
+                    education, experience, skills
+                    and other details.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Choose your design
+                </h3>
+
+                <p>
+                    Select a template and colour
+                    that matches your professional style.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Save as PDF
+                </h3>
+
+                <p>
+                    Print your completed CV and
+                    choose “Save as PDF”.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="primary-btn center-btn"
+        onclick="openBuilder()">
+
+        Start Creating My CV →
+
+    </button>
+
+</section>
+
+
+<!-- ================= TEMPLATES ================= -->
+
+<section class="templates section" id="templates">
+
+    <div class="section-heading">
+
+        <span>DESIGNS</span>
+
+        <h2>
+            Choose your CV style
+        </h2>
+
+        <p>
+            Start with a design and make it your own.
+        </p>
+
+    </div>
+
+
+    <div class="template-grid">
+
+        <div class="template-card">
+
+            <div class="template-preview modern-preview">
+
+                <div class="tp-side"></div>
+
+                <div class="tp-content">
+
+                    <div class="tp-name"></div>
+                    <div class="tp-job"></div>
+
+                    <div class="tp-heading"></div>
+
+                    <div class="tp-text"></div>
+                    <div class="tp-text"></div>
+                    <div class="tp-text small"></div>
+
+                    <div class="tp-heading"></div>
+
+                    <div class="tp-text"></div>
+
+                </div>
+
+            </div>
+
+            <h3>
+                Modern
+            </h3>
+
+            <p>
+                Clean professional layout
+            </p>
+
+        </div>
+
+
+        <div class="template-card">
+
+            <div class="template-preview classic-preview">
+
+                <div class="classic-top"></div>
+
+                <div class="classic-body">
+
+                    <div class="classic-name"></div>
+                    <div class="classic-job"></div>
+
+                    <div class="classic-heading"></div>
+
+                    <div class="classic-text"></div>
+                    <div class="classic-text"></div>
+
+                    <div class="classic-heading"></div>
+
+                    <div class="classic-text"></div>
+
+                </div>
+
+            </div>
+
+            <h3>
+                Classic
+            </h3>
+
+            <p>
+                Traditional professional design
+            </p>
+
+        </div>
+
+
+        <div class="template-card">
+
+            <div class="template-preview minimal-preview">
+
+                <div class="minimal-name"></div>
+                <div class="minimal-job"></div>
+
+                <div class="minimal-heading"></div>
+
+                <div class="minimal-text"></div>
+                <div class="minimal-text"></div>
+
+                <div class="minimal-heading"></div>
+
+                <div class="minimal-text"></div>
+
+            </div>
+
+            <h3>
+                Minimal
+            </h3>
+
+            <p>
+                Simple and elegant
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PDF HELP ================= -->
+
+<section class="pdf-help">
+
+    <div>
+
+        <div class="help-icon">
+            ?
+        </div>
+
+        <div>
+
+            <h2>
+                Don't know how to save your CV as a PDF?
+            </h2>
+
+            <p>
+                No problem. We'll show you exactly how
+                to do it step by step.
+            </p>
+
+        </div>
+
+    </div>
+
+    <button onclick="openPdfHelp()">
+        View Sinhala Instructions
+    </button>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <h2>
+        Ready to create your CV?
+    </h2>
+
+    <p>
+        Make your professional CV today.
+    </p>
+
+    <button
+        class="primary-btn"
+        onclick="openBuilder()">
+
+        Create My CV →
+
+    </button>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        Lanka<span>CV</span>
+    </div>
+
+    <p>
+        Create your professional CV easily.
+    </p>
+
+    <small>
+        © 2026 LankaCV. All rights reserved.
+    </small>
+
+</footer>
+
+
+<!-- ================= PDF MODAL ================= -->
+
+<div class="modal" id="pdfModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close-modal"
+            onclick="closePdfHelp()">
+
+            ×
+
+        </button>
+
+        <div class="modal-icon">
+            📄
+        </div>
+
+        <h2>
+            PDF එකක් විදිහට CV එක Download කරන්නේ කොහොමද?
+        </h2>
+
+        <p class="modal-intro">
+            CV එක හදාගෙන ඉවර වුණාම පහත steps ටික follow කරන්න.
+        </p>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                1
+            </div>
+
+            <div>
+
+                <h3>
+                    CV එක සම්පූර්ණ කරන්න
+                </h3>
+
+                <p>
+                    Personal Details, Education,
+                    Experience, Skills වගේ අවශ්‍ය තොරතුරු
+                    සියල්ල ඇතුළත් කරන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                2
+            </div>
+
+            <div>
+
+                <h3>
+                    Download / Save as PDF ඔබන්න
+                </h3>
+
+                <p>
+                    CV Builder එකේ පහළ තියෙන
+                    “Download / Save as PDF” button එක ඔබන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                3
+            </div>
+
+            <div>
+
+                <h3>
+                    Print window එක එනකම් ඉන්න
+                </h3>
+
+                <p>
+                    Browser එකේ Print window එක open වෙයි.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                4
+            </div>
+
+            <div>
+
+                <h3>
+                    Destination / Printer එක තෝරන්න
+                </h3>
+
+                <p>
+                    Computer එකේ නම්
+                    <b>Save as PDF</b> තෝරන්න.
+                    Phone එකක නම් Print options වල
+                    PDF / Save as PDF option එක බලන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                5
+            </div>
+
+            <div>
+
+                <h3>
+                    Save කරන්න
+                </h3>
+
+                <p>
+                    File name එකක් දාලා
+                    <b>Save</b> කරන්න.
+                    දැන් ඔයාගේ CV එක PDF file එකක්.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tip">
+
+            💡 <b>Tip:</b>
+            PDF එක save කරන්න කලින් Preview එකේ
+            CV එකේ සියලුම details හරියට තියෙනවද කියලා බලන්න.
+
+        </div>
+
+
+        <button
+            class="modal-builder-btn"
+            onclick="closePdfHelp(); openBuilder();">
+
+            දැන් CV එක හදන්න →
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="landing.js"></script>
+
+</body>
+</html>

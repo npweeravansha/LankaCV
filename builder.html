@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LankaCV - CV Builder</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BUILDER NAVBAR
+===================================================== -->
+
+<header class="builder-navbar">
+
+    <a
+        href="index.html"
+        class="builder-logo"
+    >
+        Lanka<span>CV</span>
+    </a>
+
+
+    <div class="builder-nav-right">
+
+        <a
+            href="index.html"
+            class="home-btn"
+        >
+            ← Home
+        </a>
+
+
+        <button
+            type="button"
+            class="help-btn"
+            id="pdfHelpBtn"
+        >
+            ❓ PDF Help
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PDF HELP MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="pdfModal"
+>
+
+    <div class="modal-box">
+
+        <button
+            type="button"
+            class="close-modal"
+            id="closePdfModal"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon">
+            📄
+        </div>
+
+
+        <h2>
+            PDF එකක් විදිහට CV එක Save කරන්නේ කොහොමද?
+        </h2>
+
+
+        <p class="modal-intro">
+            CV එක හදාගෙන ඉවර වුණාම පහත steps ටික follow කරන්න.
+        </p>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                1
+            </div>
+
+            <div>
+
+                <h3>
+                    CV එක සම්පූර්ණ කරන්න
+                </h3>
+
+                <p>
+                    Personal Details, Education,
+                    Experience, Skills වගේ අවශ්‍ය
+                    තොරතුරු සියල්ල ඇතුළත් කරන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                2
+            </div>
+
+            <div>
+
+                <h3>
+                    CV Preview එක බලන්න
+                </h3>
+
+                <p>
+                    දකුණු පැත්තේ Preview එක බලලා
+                    සියලුම details හරියට පේනවාද
+                    කියලා check කරන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                3
+            </div>
+
+            <div>
+
+                <h3>
+                    Download / Save as PDF ඔබන්න
+                </h3>
+
+                <p>
+                    Builder එකේ පහළ තියෙන
+                    <b>Download / Save as PDF</b>
+                    button එක ඔබන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                4
+            </div>
+
+            <div>
+
+                <h3>
+                    Print window එක එනකම් ඉන්න
+                </h3>
+
+                <p>
+                    Chrome / Edge වගේ browser එකේ
+                    Print window එක open වෙයි.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                5
+            </div>
+
+            <div>
+
+                <h3>
+                    Save as PDF තෝරන්න
+                </h3>
+
+                <p>
+                    <b>Destination</b> හෝ
+                    <b>Printer</b> කියන තැනින්
+                    <b>Save as PDF</b> තෝරන්න.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="instruction">
+
+            <div class="instruction-number">
+                6
+            </div>
+
+            <div>
+
+                <h3>
+                    Save කරන්න
+                </h3>
+
+                <p>
+                    File name එක දාලා
+                    <b>Save</b> කරන්න.
+                    දැන් ඔයාගේ CV එක PDF file එකක්.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tip">
+
+            💡 <b>Tip:</b>
+
+            Print window එකේ
+            <b>Background graphics</b>
+            option එක තිබුණොත් ON කරන්න.
+
+            එතකොට CV එකේ colors සහ
+            sidebar design එක හොඳට PDF එකට එනවා.
+
+        </div>
+
+
+        <button
+            type="button"
+            class="modal-builder-btn"
+            id="closePdfModalBottom"
+        >
+            Got it ✓
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN BUILDER
+===================================================== -->
+
+<main class="app">
+
+
+<!-- =====================================================
+     EDITOR
+===================================================== -->
+
+<section class="editor">
+
+
+    <!-- =================================================
+         PERSONAL DETAILS
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            👤 Personal Details
+        </h2>
+
+
+        <div class="photo-upload">
+
+            <div class="photo-preview">
+
+                <img
+                    id="photoPreview"
+                    alt=""
+                >
+
+                <span id="photoText">
+                    Photo
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Profile Photo
+                </label>
+
+                <input
+                    type="file"
+                    id="photo"
+                    accept="image/*"
+                >
+
+                <small>
+                    JPG / PNG recommended
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+            id="fullName"
+            placeholder="Your full name"
+        >
+
+
+        <label>
+            Job Title
+        </label>
+
+        <input
+            id="jobTitle"
+            placeholder="Student / Web Developer"
+        >
+
+
+        <label>
+            Address
+        </label>
+
+        <textarea
+            id="address"
+            placeholder="Your address"
+        ></textarea>
+
+
+        <label>
+            Phone
+        </label>
+
+        <input
+            id="phone"
+            placeholder="07XXXXXXXX"
+        >
+
+
+        <label>
+            Email
+        </label>
+
+        <input
+            id="email"
+            type="email"
+            placeholder="example@email.com"
+        >
+
+
+        <label>
+            Date of Birth
+        </label>
+
+        <input
+            id="dob"
+            placeholder="DD / MM / YYYY"
+        >
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROFILE
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            📝 Profile
+        </h2>
+
+        <textarea
+            id="profile"
+            class="large-textarea"
+            placeholder="Write a short professional profile..."
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- =================================================
+         A/L
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            🎓 A/L Education
+        </h2>
+
+
+        <label>
+            School
+        </label>
+
+        <input
+            id="alSchool"
+            placeholder="School name"
+        >
+
+
+        <label>
+            Year
+        </label>
+
+        <input
+            id="alYear"
+            placeholder="2025"
+        >
+
+
+        <label>
+            Stream
+        </label>
+
+        <input
+            id="alStream"
+            placeholder="Commerce / Maths / Arts / Science"
+        >
+
+
+        <div class="results-box">
+
+            <div class="result-heading">
+
+                <span>
+                    Subject
+                </span>
+
+                <span>
+                    Result
+                </span>
+
+            </div>
+
+
+            <div class="result-row">
+
+                <input
+                    id="al1"
+                    placeholder="Subject 01"
+                >
+
+                <input
+                    id="alr1"
+                    placeholder="A"
+                >
+
+            </div>
+
+
+            <div class="result-row">
+
+                <input
+                    id="al2"
+                    placeholder="Subject 02"
+                >
+
+                <input
+                    id="alr2"
+                    placeholder="B"
+                >
+
+            </div>
+
+
+            <div class="result-row">
+
+                <input
+                    id="al3"
+                    placeholder="Subject 03"
+                >
+
+                <input
+                    id="alr3"
+                    placeholder="C"
+                >
+
+            </div>
+
+
+            <div class="result-row">
+
+                <input
+                    id="al4"
+                    placeholder="Subject 04"
+                >
+
+                <input
+                    id="alr4"
+                    placeholder="S"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         O/L
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            📚 O/L Education
+        </h2>
+
+
+        <label>
+            School
+        </label>
+
+        <input
+            id="olSchool"
+            placeholder="School name"
+        >
+
+
+        <label>
+            Year
+        </label>
+
+        <input
+            id="olYear"
+            placeholder="2022"
+        >
+
+
+        <div class="results-box">
+
+            <div class="result-heading">
+
+                <span>
+                    Subject
+                </span>
+
+                <span>
+                    Result
+                </span>
+
+            </div>
+
+
+            <div class="result-row">
+                <input id="ol1" placeholder="Subject 01">
+                <input id="olr1" placeholder="A">
+            </div>
+
+            <div class="result-row">
+                <input id="ol2" placeholder="Subject 02">
+                <input id="olr2" placeholder="B">
+            </div>
+
+            <div class="result-row">
+                <input id="ol3" placeholder="Subject 03">
+                <input id="olr3" placeholder="C">
+            </div>
+
+            <div class="result-row">
+                <input id="ol4" placeholder="Subject 04">
+                <input id="olr4" placeholder="S">
+            </div>
+
+            <div class="result-row">
+                <input id="ol5" placeholder="Subject 05">
+                <input id="olr5" placeholder="A">
+            </div>
+
+            <div class="result-row">
+                <input id="ol6" placeholder="Subject 06">
+                <input id="olr6" placeholder="B">
+            </div>
+
+            <div class="result-row">
+                <input id="ol7" placeholder="Subject 07">
+                <input id="olr7" placeholder="C">
+            </div>
+
+            <div class="result-row">
+                <input id="ol8" placeholder="Subject 08">
+                <input id="olr8" placeholder="S">
+            </div>
+
+            <div class="result-row">
+                <input id="ol9" placeholder="Subject 09">
+                <input id="olr9" placeholder="A">
+            </div>
+
+            <div class="result-row">
+                <input id="ol10" placeholder="Subject 10">
+                <input id="olr10" placeholder="B">
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         QUALIFICATIONS
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            🏆 Qualifications
+        </h2>
+
+
+        <div id="qualificationForms"></div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            id="addQualification"
+        >
+            + Add Qualification
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         EXPERIENCE
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            💼 Experience
+        </h2>
+
+
+        <div id="experienceForms"></div>
+
+
+        <button
+            type="button"
+            class="add-btn"
+            id="addExperience"
+        >
+            + Add Experience
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SKILLS
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            ⚡ Skills
+        </h2>
+
+
+        <textarea
+            id="skills"
+            class="large-textarea"
+            placeholder="HTML&#10;CSS&#10;JavaScript&#10;Communication&#10;Teamwork"
+        ></textarea>
+
+
+        <small>
+            Enter one skill per line
+        </small>
+
+    </div>
+
+
+
+    <!-- =================================================
+         LANGUAGES
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            🌐 Languages
+        </h2>
+
+
+        <textarea
+            id="languages"
+            placeholder="Sinhala - Native&#10;English - Good&#10;Tamil - Basic"
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- =================================================
+         REFERENCES
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            📞 References
+        </h2>
+
+
+        <textarea
+            id="references"
+            class="large-textarea"
+            placeholder="Name&#10;Position&#10;Company&#10;Phone"
+        ></textarea>
+
+    </div>
+
+
+
+    <!-- =================================================
+         THEMES
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            🎨 CV Theme
+        </h2>
+
+
+        <div class="theme-grid">
+
+            <button
+                type="button"
+                class="theme-btn active"
+                data-theme="modern"
+            >
+                <span class="theme-icon modern-icon"></span>
+                Modern
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-btn"
+                data-theme="classic"
+            >
+                <span class="theme-icon classic-icon"></span>
+                Classic
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-btn"
+                data-theme="minimal"
+            >
+                <span class="theme-icon minimal-icon"></span>
+                Minimal
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-btn"
+                data-theme="elegant"
+            >
+                <span class="theme-icon elegant-icon"></span>
+                Elegant
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-btn"
+                data-theme="corporate"
+            >
+                <span class="theme-icon corporate-icon"></span>
+                Corporate
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-btn"
+                data-theme="creative"
+            >
+                <span class="theme-icon creative-icon"></span>
+                Creative
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         COLOR
+    ================================================= -->
+
+    <div class="form-section">
+
+        <h2>
+            🌈 CV Color
+        </h2>
+
+
+        <div class="color-options">
+
+            <button
+                type="button"
+                class="color-btn active"
+                data-color="#183b56"
+                style="background:#183b56"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#245953"
+                style="background:#245953"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#493267"
+                style="background:#493267"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#7a3e48"
+                style="background:#7a3e48"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#333333"
+                style="background:#333333"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#0b5f75"
+                style="background:#0b5f75"
+            ></button>
+
+
+            <button
+                type="button"
+                class="color-btn"
+                data-color="#6b4f2a"
+                style="background:#6b4f2a"
+            ></button>
+
+
+            <label class="custom-color">
+
+                Custom
+
+                <input
+                    type="color"
+                    id="customColor"
+                    value="#183b56"
+                >
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         DOWNLOAD
+    ================================================= -->
+
+    <button
+        type="button"
+        class="download-btn"
+        id="printBtn"
+    >
+        📄 Download / Save as PDF
+    </button>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PREVIEW
+===================================================== -->
+
+<section class="preview-area">
+
+
+    <div
+        class="cv modern"
+        id="cv"
+    >
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <div class="profile-photo">
+
+                <img
+                    id="cvPhoto"
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div
+                class="side-section"
+                id="contactSection"
+            >
+
+                <h3>
+                    CONTACT
+                </h3>
+
+                <p id="cvPhone"></p>
+
+                <p id="cvEmail"></p>
+
+                <p id="cvAddress"></p>
+
+            </div>
+
+
+            <!-- DOB -->
+
+            <div
+                class="side-section"
+                id="dobSection"
+            >
+
+                <h3>
+                    PERSONAL
+                </h3>
+
+                <p>
+                    DOB:
+                    <span id="cvDob"></span>
+                </p>
+
+            </div>
+
+
+            <!-- SKILLS -->
+
+            <div
+                class="side-section"
+                id="skillsSideSection"
+            >
+
+                <h3>
+                    SKILLS
+                </h3>
+
+                <p id="cvSkills"></p>
+
+            </div>
+
+
+            <!-- LANGUAGES -->
+
+            <div
+                class="side-section"
+                id="languagesSideSection"
+            >
+
+                <h3>
+                    LANGUAGES
+                </h3>
+
+                <p id="cvLanguages"></p>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CV CONTENT
+        ================================================= -->
+
+        <div class="cv-content">
+
+
+            <div class="cv-name">
+
+                <h1 id="cvName">
+                    YOUR NAME
+                </h1>
+
+                <h2 id="cvJobTitle">
+                    PROFESSIONAL
+                </h2>
+
+            </div>
+
+
+
+            <!-- PROFILE -->
+
+            <section
+                class="cv-section"
+                id="profileCvSection"
+            >
+
+                <h3>
+                    PROFILE
+                </h3>
+
+                <p id="cvProfile"></p>
+
+            </section>
+
+
+
+            <!-- QUALIFICATIONS -->
+
+            <section
+                class="cv-section"
+                id="qualificationCvSection"
+            >
+
+                <h3>
+                    QUALIFICATIONS
+                </h3>
+
+                <div id="qualificationPreview"></div>
+
+            </section>
+
+
+
+            <!-- A/L -->
+
+            <section
+                class="cv-section"
+                id="alCvSection"
+            >
+
+                <h3>
+                    EDUCATION – G.C.E. ADVANCED LEVEL
+                </h3>
+
+
+                <div class="education-block">
+
+                    <h4>
+                        G.C.E. Advanced Level
+                    </h4>
+
+
+                    <div class="education-meta">
+
+                        <span id="cvAlSchool"></span>
+
+                        <span id="cvAlYear"></span>
+
+                        <span id="cvAlStream"></span>
+
+                    </div>
+
+
+                    <table>
+
+                        <tbody id="alTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- O/L -->
+
+            <section
+                class="cv-section"
+                id="olCvSection"
+            >
+
+                <h3>
+                    EDUCATION – G.C.E. ORDINARY LEVEL
+                </h3>
+
+
+                <div class="education-block">
+
+                    <h4>
+                        G.C.E. Ordinary Level
+                    </h4>
+
+
+                    <div class="education-meta">
+
+                        <span id="cvOlSchool"></span>
+
+                        <span id="cvOlYear"></span>
+
+                    </div>
+
+
+                    <div
+                        class="ol-results-grid"
+                        id="olGrid"
+                    ></div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- EXPERIENCE -->
+
+            <section
+                class="cv-section"
+                id="experienceCvSection"
+            >
+
+                <h3>
+                    EXPERIENCE
+                </h3>
+
+
+                <div id="experiencePreview"></div>
+
+            </section>
+
+
+
+            <!-- REFERENCES -->
+
+            <section
+                class="cv-section"
+                id="referencesCvSection"
+            >
+
+                <h3>
+                    REFERENCES
+                </h3>
+
+
+                <p id="cvReferences"></p>
+
+            </section>
+
+
+
+            <!-- FOOTER -->
+
+            <!-- FOOTER -->
+
+<div class="cv-footer">
+
+    <div class="declaration">
+
+        <p>
+            I hereby declare that all the information
+            provided in this CV is true and accurate
+            to the best of my knowledge.
+        </p>
+
+    </div>
+
+
+    <div class="signature-area">
+
+        <div class="footer-item">
+
+            <div class="footer-line"></div>
+
+            <span>
+                Date
+            </span>
+
+        </div>
+
+
+        <div class="footer-item">
+
+            <div class="footer-line"></div>
+
+            <span>
+                Signature
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
