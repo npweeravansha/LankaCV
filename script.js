@@ -308,22 +308,52 @@ function updateReferences(){
    PHOTO UPLOAD
 ===================================================== */
 const photoInput = document.getElementById("photo");
-if(photoInput){
-    photoInput.addEventListener("change", function(event){
+
+if (photoInput) {
+    photoInput.addEventListener("change", function (event) {
         const file = event.target.files[0];
-        if(!file || !file.type.startsWith("image/")) return;
-        
+
+        if (!file) return;
+
+        // Only allow JPG and PNG
+        const allowedTypes = ["image/jpeg", "image/png"];
+
+        if (!allowedTypes.includes(file.type)) {
+            alert("JPG හෝ PNG image එකක් පමණක් upload කරන්න.");
+            photoInput.value = "";
+            return;
+        }
+
+        // Maximum file size: 2MB
+        if (file.size > 2 * 1024 * 1024) {
+            alert("Photo එක 2MB ට වඩා අඩු විය යුතුයි.");
+            photoInput.value = "";
+            return;
+        }
+
         const reader = new FileReader();
-        reader.onload = function(e){
+
+        reader.onload = function (e) {
             const src = e.target.result;
+
             const preview = document.getElementById("photoPreview");
             const cvPhoto = document.getElementById("cvPhoto");
             const photoText = document.getElementById("photoText");
-            
-            if(preview){ preview.src = src; preview.style.display = "block"; }
-            if(photoText){ photoText.style.display = "none"; }
-            if(cvPhoto){ cvPhoto.src = src; }
+
+            if (preview) {
+                preview.src = src;
+                preview.style.display = "block";
+            }
+
+            if (photoText) {
+                photoText.style.display = "none";
+            }
+
+            if (cvPhoto) {
+                cvPhoto.src = src;
+            }
         };
+
         reader.readAsDataURL(file);
     });
 }
