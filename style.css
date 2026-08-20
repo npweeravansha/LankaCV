@@ -79,6 +79,22 @@ button, input, textarea{ font-family:inherit; }
 .download-btn{ width:100%; padding:15px; border:0; border-radius:10px; background:#183b56; color:white; font-size:14px; font-weight:800; cursor:pointer; box-shadow:0 8px 20px rgba(24,59,86,.18); transition:.2s; }
 .download-btn:hover{ background:#2f80a8; transform:translateY(-1px); }
 
+.feedback-btn {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.feedback-btn:hover {
+    opacity: 0.9;
+}
+
 /* PREVIEW AREA */
 .preview-area{ min-height:calc(100vh - 76px); padding:45px; background:radial-gradient(circle at 20% 20%, rgba(47,128,168,.08), transparent 30%), #eef3f6; display:flex; justify-content:center; align-items:flex-start; overflow:auto; position:sticky; top:76px; height:calc(100vh - 76px); }
 
